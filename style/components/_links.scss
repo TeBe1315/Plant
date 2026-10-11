@@ -1,0 +1,21 @@
+@use '../abstract/typhography' as t;
+@use '../abstract/variables' as v;
+
+@mixin linksbasics {
+	text-decoration: none;
+	font-size: t.$fs-p;
+	font-family: t.$fontText;
+	padding: 0.8vh 3vw;
+}
+
+@mixin linksNav {
+	text-decoration: none;
+	font-size: t.$fs-p;
+	font-family: t.$fontText;
+	padding: 0.8vh 0;
+	color: v.$color-nav-text;
+	transition: color 0.3s ease;
+	&:hover {
+		color: v.$color-nav-hover;
+	}
+}

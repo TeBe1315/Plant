@@ -1,0 +1,13 @@
+@use './typhography' as t;
+@use './variables' as v;
+
+@mixin textH1 {
+	font-family: t.$fontHeader;
+	font-size: t.$fs-h1;
+	color: v.$color-text;
+}
+@mixin textP {
+	font-family: t.$fontText;
+	font-size: t.$fs-p;
+	color: v.$color-text;
+}
