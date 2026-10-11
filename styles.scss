@@ -116,7 +116,10 @@ nav {
 	justify-content: space-between;
 	align-items: center;
 	background-color: v.$color-nav-bg;
-	Ul {
+	.menu {
+		display: none;
+	}
+	ul {
 		display: flex;
 		gap: 4vw;
 		li {
@@ -145,6 +148,51 @@ nav {
 		}
 		&:focus-visible {
 			background-color: v.$color-focus;
+		}
+	}
+	.showMenu {
+		transform: translateX(0);
+	}
+}
+
+@media (max-width: 576px) {
+	header {
+		justify-content: center;
+		.hero-text {
+			text-align: center;
+			width: 100%;
+			padding: 2rem;
+			.cta-links {
+				justify-content: center;
+				gap: 5vw;
+			}
+		}
+	}
+	nav {
+		.menu {
+			display: block;
+			font-size: 2rem;
+			color: v.$color-nav-text;
+			padding: 0.5rem;
+			z-index: 11;
+		}
+		ul {
+			position: absolute;
+			width: 100%;
+			height: 100vh;
+			inset: 0;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			transform: translateX(-100%);
+			background-color: v.$color-nav-bg;
+			transition: transform 0.3s ease;
+			li {
+				list-style-type: none;
+				a {
+					@include linksNav;
+				}
+			}
 		}
 	}
 }
