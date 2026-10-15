@@ -6,6 +6,21 @@
 	font-size: t.$fs-h1;
 	color: v.$color-text;
 }
+@mixin textH2 {
+	font-family: t.$fontHeader;
+	font-size: t.$fs-h2;
+	color: v.$color-text;
+}
+@mixin textH3 {
+	font-family: t.$fontHeader;
+	font-size: t.$fs-h3;
+	color: v.$color-text;
+}
+@mixin textH4 {
+	font-family: t.$fontHeader;
+	font-size: t.$fs-h4;
+	color: v.$color-text;
+}
 @mixin textP {
 	font-family: t.$fontText;
 	font-size: t.$fs-p;

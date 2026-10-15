@@ -1,6 +1,6 @@
 @use './style/base/base';
 @use './style/abstract/mixins' as *;
-@use './style/layout/grids' as g;
+@use './style/layout/grids' as *;
 @use './style/components/buttons' as b;
 @use './style/components/cards' as c;
 @use './style/abstract/variables' as v;
@@ -154,8 +154,89 @@ nav {
 		transform: translateX(0);
 	}
 }
-
-@media (max-width: 576px) {
+// MAINN
+footer {
+	padding: 2vh 5vw;
+	background-color: v.$color-nav-bg;
+	.header-footer {
+		width: 100%;
+		margin: 5vh 0;
+		@include gridSmall;
+		h2 {
+			@include textH2;
+		}
+		.send-mail {
+			@include gridSmall;
+			.mail-text {
+				h3 {
+					@include textH3;
+					margin-bottom: 2vh;
+				}
+				label {
+					@include textP;
+					margin-right: 1vw;
+				}
+				input {
+					background-color: v.$color-background;
+					padding: 1rem;
+					border-radius: 1rem;
+				}
+				i {
+					margin-left: 0.5vw;
+					font-size: 1.6rem;
+					color: v.$color-background;
+					padding: 0.5rem;
+					cursor: pointer;
+				}
+			}
+			.mail-img {
+				background-position: center;
+				background-attachment: fixed;
+				background-size: cover;
+				width: 100%;
+				background-image: url(/img/nastogadka-flower-3646509_1920.jpg);
+			}
+		}
+	}
+	.spearation {
+		width: 100%;
+		height: 0.1rem;
+		background-color: v.$color-background;
+		margin: 5vh 0;
+	}
+	.menu-footer {
+		@include gridMidle;
+		.nav-information {
+			h2 {
+				@include textH2;
+				margin-bottom: 2vh;
+			}
+			p {
+				@include textP;
+			}
+		}
+		.nav-menu,
+		.nav-services,
+		.nav-contact,
+		.nav-social {
+			h4 {
+				@include textH4;
+				margin-bottom: 2vh;
+			}
+			ul > li {
+				list-style-type: none;
+				margin-bottom: 1vh;
+				a {
+					@include linksNav;
+					i {
+						margin-right: 0.8rem;
+					}
+				}
+			}
+		}
+	}
+}
+@media (max-width: 768px) {
 	header {
 		justify-content: center;
 		.hero-text {
@@ -173,7 +254,7 @@ nav {
 			display: block;
 			font-size: 2rem;
 			color: v.$color-nav-text;
-			padding: 0.5rem;
+			padding: 1rem;
 			z-index: 11;
 		}
 		ul {
@@ -193,6 +274,56 @@ nav {
 					@include linksNav;
 				}
 			}
+		}
+	}
+	footer {
+		padding: 2vh 2vw;
+		background-color: v.$color-nav-bg;
+		.header-footer {
+			@include gridXs;
+			text-align: center;
+			.send-mail {
+				@include gridXs;
+				.mail-text {
+					h3 {
+						@include textH3;
+						margin-bottom: 2vh;
+					}
+					label {
+						@include textP;
+						margin: 2rem;
+						display: block;
+					}
+				}
+				.mail-img {
+					display: none;
+				}
+			}
+		}
+		.menu-footer {
+			@include gridXs;
+			text-align: center;
+		}
+	}
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+	footer {
+		padding: 2vh 3vw;
+		background-color: v.$color-nav-bg;
+		.header-footer {
+			@include gridSmall;
+			h2 {
+				@include textH2;
+			}
+			.send-mail {
+				@include gridXs;
+				.mail-img {
+					display: none;
+				}
+			}
+		}
+		.menu-footer {
+			@include gridMedium;
 		}
 	}
 }

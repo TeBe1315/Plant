@@ -198,7 +198,121 @@ nav .showMenu {
   transform: translateX(0);
 }
 
-@media (max-width: 576px) {
+footer {
+  padding: 2vh 5vw;
+  background-color: #245c3a;
+}
+footer .header-footer {
+  width: 100%;
+  margin: 5vh 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+footer .header-footer h2 {
+  font-family: "Limelight", sans-serif;
+  font-size: clamp(3.6rem, 3rem + 1.4vw, 4rem);
+  color: #29332c;
+}
+footer .header-footer .send-mail {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+footer .header-footer .send-mail .mail-text h3 {
+  font-family: "Limelight", sans-serif;
+  font-size: clamp(3rem, 2.6rem + 1vw, 3.4rem);
+  color: #29332c;
+  margin-bottom: 2vh;
+}
+footer .header-footer .send-mail .mail-text label {
+  font-family: "Inter", sans-serif;
+  font-size: clamp(1.6rem, 1.55rem + 0.15vw, 1.8rem);
+  color: #29332c;
+  margin-right: 1vw;
+}
+footer .header-footer .send-mail .mail-text input {
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+footer .header-footer .send-mail .mail-text i {
+  margin-left: 0.5vw;
+  font-size: 1.6rem;
+  color: #ffffff;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+footer .header-footer .send-mail .mail-img {
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  background-image: url(/img/nastogadka-flower-3646509_1920.jpg);
+}
+footer .spearation {
+  width: 100%;
+  height: 0.1rem;
+  background-color: #ffffff;
+  margin: 5vh 0;
+}
+footer .menu-footer {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 4rem;
+}
+footer .menu-footer .nav-information h2 {
+  font-family: "Limelight", sans-serif;
+  font-size: clamp(3.6rem, 3rem + 1.4vw, 4rem);
+  color: #29332c;
+  margin-bottom: 2vh;
+}
+footer .menu-footer .nav-information p {
+  font-family: "Inter", sans-serif;
+  font-size: clamp(1.6rem, 1.55rem + 0.15vw, 1.8rem);
+  color: #29332c;
+}
+footer .menu-footer .nav-menu h4,
+footer .menu-footer .nav-services h4,
+footer .menu-footer .nav-contact h4,
+footer .menu-footer .nav-social h4 {
+  font-family: "Limelight", sans-serif;
+  font-size: clamp(3rem, 2.6rem + 1vw, 3.2rem);
+  color: #29332c;
+  margin-bottom: 2vh;
+}
+footer .menu-footer .nav-menu ul > li,
+footer .menu-footer .nav-services ul > li,
+footer .menu-footer .nav-contact ul > li,
+footer .menu-footer .nav-social ul > li {
+  list-style-type: none;
+  margin-bottom: 1vh;
+}
+footer .menu-footer .nav-menu ul > li a,
+footer .menu-footer .nav-services ul > li a,
+footer .menu-footer .nav-contact ul > li a,
+footer .menu-footer .nav-social ul > li a {
+  text-decoration: none;
+  font-size: clamp(1.6rem, 1.55rem + 0.15vw, 1.8rem);
+  font-family: "Inter", sans-serif;
+  padding: 0.8vh 0;
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+footer .menu-footer .nav-menu ul > li a:hover,
+footer .menu-footer .nav-services ul > li a:hover,
+footer .menu-footer .nav-contact ul > li a:hover,
+footer .menu-footer .nav-social ul > li a:hover {
+  color: #f2c94c;
+}
+footer .menu-footer .nav-menu ul > li a i,
+footer .menu-footer .nav-services ul > li a i,
+footer .menu-footer .nav-contact ul > li a i,
+footer .menu-footer .nav-social ul > li a i {
+  margin-right: 0.8rem;
+}
+
+@media (max-width: 768px) {
   header {
     justify-content: center;
   }
@@ -215,7 +329,7 @@ nav .showMenu {
     display: block;
     font-size: 2rem;
     color: #ffffff;
-    padding: 0.5rem;
+    padding: 1rem;
     z-index: 11;
   }
   nav ul {
@@ -243,5 +357,71 @@ nav .showMenu {
   }
   nav ul li a:hover {
     color: #f2c94c;
+  }
+  footer {
+    padding: 2vh 2vw;
+    background-color: #245c3a;
+  }
+  footer .header-footer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    text-align: center;
+  }
+  footer .header-footer .send-mail {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
+  footer .header-footer .send-mail .mail-text h3 {
+    font-family: "Limelight", sans-serif;
+    font-size: clamp(3rem, 2.6rem + 1vw, 3.4rem);
+    color: #29332c;
+    margin-bottom: 2vh;
+  }
+  footer .header-footer .send-mail .mail-text label {
+    font-family: "Inter", sans-serif;
+    font-size: clamp(1.6rem, 1.55rem + 0.15vw, 1.8rem);
+    color: #29332c;
+    margin: 2rem;
+    display: block;
+  }
+  footer .header-footer .send-mail .mail-img {
+    display: none;
+  }
+  footer .menu-footer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    text-align: center;
+  }
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  footer {
+    padding: 2vh 3vw;
+    background-color: #245c3a;
+  }
+  footer .header-footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  footer .header-footer h2 {
+    font-family: "Limelight", sans-serif;
+    font-size: clamp(3.6rem, 3rem + 1.4vw, 4rem);
+    color: #29332c;
+  }
+  footer .header-footer .send-mail {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
+  footer .header-footer .send-mail .mail-img {
+    display: none;
+  }
+  footer .menu-footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
   }
 }/*# sourceMappingURL=styles.css.map */
