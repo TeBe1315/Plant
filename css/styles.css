@@ -198,6 +198,118 @@ nav .showMenu {
   transform: translateX(0);
 }
 
+main {
+  width: 100%;
+  margin: 10vh 0;
+}
+main section {
+  padding: 10vh 5vw;
+}
+main .about .about-header {
+  margin-bottom: 5vh;
+}
+main .about .about-header h2 {
+  font-family: "Limelight", sans-serif;
+  font-size: clamp(3.6rem, 3rem + 1.4vw, 4rem);
+  color: #29332c;
+}
+main .about .about-header p {
+  font-family: "Inter", sans-serif;
+  font-size: clamp(1.6rem, 1.55rem + 0.15vw, 1.8rem);
+  color: #29332c;
+}
+main .about .about-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  gap: 3vw;
+  height: 80vh;
+}
+main .about .about-content .content-img {
+  border-radius: 1rem;
+  overflow: hidden;
+}
+main .about .about-content .content-img img {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+main .about .about-content .content-text {
+  position: relative;
+  height: 100%;
+}
+main .about .about-content .content-text span {
+  font-family: "Inter", sans-serif;
+  font-size: clamp(1.6rem, 1.55rem + 0.15vw, 1.8rem);
+  color: #29332c;
+  width: 100%;
+}
+main .about .about-content .content-text ul {
+  margin: 5vh 0;
+}
+main .about .about-content .content-text ul li {
+  font-family: "Inter", sans-serif;
+  font-size: clamp(1.6rem, 1.55rem + 0.15vw, 1.8rem);
+  color: #29332c;
+  margin-bottom: 1vh;
+  list-style-type: none;
+}
+main .about .about-content .content-text ul li i {
+  margin-right: 1vw;
+  font-size: 1.6rem;
+  color: #3f7d4a;
+}
+main .about .about-content .content-text a {
+  text-decoration: none;
+  font-size: clamp(1.6rem, 1.55rem + 0.15vw, 1.8rem);
+  font-family: "Inter", sans-serif;
+  padding: 0.8vh 3vw;
+  color: #243326;
+  background-color: #f2c94c;
+  border-radius: 1rem;
+  border: 0.1rem solid transparent;
+  transition: background-color 0.3s ease;
+}
+main .about .about-content .content-text a:hover {
+  background-color: #ddb52f;
+}
+main .about .about-content .content-text a:active {
+  border: 0.1rem solid #c9a122;
+}
+main .about .about-content .content-text a:focus-visible {
+  background-color: #245c3a;
+}
+main .about .about-content .content-text .profits-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  gap: 2vw;
+  margin-top: 5vh;
+}
+main .about .about-content .content-text .profits-box .profit {
+  background-color: #3f7d4a;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5vh 0;
+}
+main .about .about-content .content-text .profits-box .profit h3 {
+  font-family: "Limelight", sans-serif;
+  font-size: clamp(3rem, 2.6rem + 1vw, 3.4rem);
+  color: #29332c;
+  margin-bottom: 2vh;
+}
+main .about .about-content .content-text .profits-box .profit p {
+  font-family: "Inter", sans-serif;
+  font-size: clamp(1.6rem, 1.55rem + 0.15vw, 1.8rem);
+  color: #29332c;
+}
+
 footer {
   padding: 2vh 5vw;
   background-color: #245c3a;
@@ -358,6 +470,38 @@ footer .menu-footer .nav-social ul > li a i {
   nav ul li a:hover {
     color: #f2c94c;
   }
+  main {
+    width: 100%;
+    margin: 5vh 0;
+  }
+  main section {
+    padding: 5vh 5vw;
+  }
+  main .about .about-content {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    gap: 3vw;
+    height: unset;
+  }
+  main .about .about-content .content-img {
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+  main .about .about-content .content-img img {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+  main .about .about-content .content-text {
+    height: unset;
+  }
+  main .about .about-content .content-text .profits-box {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    position: static;
+  }
   footer {
     padding: 2vh 2vw;
     background-color: #245c3a;
@@ -397,6 +541,38 @@ footer .menu-footer .nav-social ul > li a i {
   }
 }
 @media (min-width: 768px) and (max-width: 1200px) {
+  main {
+    width: 100%;
+    margin: 5vh 0;
+  }
+  main section {
+    padding: 5vh 5vw;
+  }
+  main .about .about-content {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    gap: 3vw;
+    height: unset;
+  }
+  main .about .about-content .content-img {
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+  main .about .about-content .content-img img {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+  main .about .about-content .content-text {
+    height: unset;
+  }
+  main .about .about-content .content-text .profits-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    position: static;
+  }
   footer {
     padding: 2vh 3vw;
     background-color: #245c3a;
