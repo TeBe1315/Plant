@@ -248,6 +248,58 @@ main {
 			}
 		}
 	}
+	.choice {
+		@include gridMedium;
+		background-color: v.$color-secondary;
+		.choice-header {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			h2 {
+				@include textH2;
+				margin-bottom: 2vh;
+			}
+			p {
+				@include textP;
+				margin-bottom: 3vh;
+			}
+			img {
+				width: 100%;
+				background-size: cover;
+			}
+		}
+		.choice-img {
+			img {
+				width: 100%;
+			}
+		}
+		.choice-proof {
+			@include gridXs;
+			.proof-box {
+				display: flex;
+				padding-bottom: 1vh;
+				border-bottom: 0.1rem solid v.$color-primary;
+				margin-bottom: 8vh;
+				i {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					margin-right: 2vw;
+					font-size: 3rem;
+					color: v.$color-heading;
+				}
+				.proof-content {
+					h3 {
+						@include textH3;
+						margin-bottom: 1vh;
+					}
+					p {
+						@include textP;
+					}
+				}
+			}
+		}
+	}
 }
 footer {
 	padding: 2vh 5vw;
@@ -399,6 +451,32 @@ footer {
 				}
 			}
 		}
+		.choice {
+			@include gridXs;
+			background-color: v.$color-secondary;
+			.choice-header {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+
+				margin-bottom: 2vh;
+			}
+			.choice-img {
+				display: none;
+			}
+			.choice-proof {
+				@include gridXs;
+				.proof-box {
+					display: block;
+					i {
+						margin-right: 3vw;
+						justify-content: left;
+						margin-right: unset;
+						margin-bottom: 2vh;
+					}
+				}
+			}
+		}
 	}
 	footer {
 		padding: 2vh 2vw;
@@ -456,6 +534,30 @@ footer {
 					.profits-box {
 						@include gridSmall;
 						position: static;
+					}
+				}
+			}
+		}
+		.choice {
+			@include gridXs;
+			background-color: v.$color-secondary;
+			.choice-header {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+
+				margin-bottom: 2vh;
+			}
+			.choice-img {
+				display: none;
+			}
+			.choice-proof {
+				@include gridXs;
+				.proof-box {
+					display: flex;
+					i {
+						justify-content: left;
+						margin-right: 3vw;
 					}
 				}
 			}
