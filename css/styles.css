@@ -369,6 +369,70 @@ main .choice .choice-proof .proof-box .proof-content p {
   font-size: clamp(1.6rem, 1.55rem + 0.15vw, 1.8rem);
   color: #29332c;
 }
+main .services .service-header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 5vh;
+}
+main .services .service-header h2 {
+  font-family: "Limelight", sans-serif;
+  font-size: clamp(3.6rem, 3rem + 1.4vw, 4rem);
+  color: #29332c;
+  margin-bottom: 1vh;
+}
+main .services .service-header p {
+  font-family: "Inter", sans-serif;
+  font-size: clamp(1.6rem, 1.55rem + 0.15vw, 1.8rem);
+  color: #29332c;
+}
+main .services .services-box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3vw;
+}
+main .services .services-box .service {
+  padding: 4vh 3vw;
+  border-radius: 1rem;
+  background-color: #d9e2d8;
+}
+main .services .services-box .service i {
+  font-size: 3rem;
+  margin-bottom: 1vh;
+}
+main .services .services-box .service h3 {
+  font-family: "Limelight", sans-serif;
+  font-size: clamp(3rem, 2.6rem + 1vw, 3.4rem);
+  color: #29332c;
+  margin-bottom: 5vh;
+}
+main .services .services-box .service p {
+  font-family: "Inter", sans-serif;
+  font-size: clamp(1.6rem, 1.55rem + 0.15vw, 1.8rem);
+  color: #29332c;
+  margin-bottom: 4vh;
+  padding-top: 1vh;
+  border-top: 0.1rem solid #245c3a;
+}
+main .services .services-box .service a {
+  text-decoration: none;
+  font-size: clamp(1.6rem, 1.55rem + 0.15vw, 1.8rem);
+  font-family: "Inter", sans-serif;
+  padding: 0.8vh 3vw;
+  color: #243326;
+  background-color: #f2c94c;
+  border-radius: 1rem;
+  border: 0.1rem solid transparent;
+  transition: background-color 0.3s ease;
+}
+main .services .services-box .service a:hover {
+  background-color: #ddb52f;
+}
+main .services .services-box .service a:active {
+  border: 0.1rem solid #c9a122;
+}
+main .services .services-box .service a:focus-visible {
+  background-color: #245c3a;
+}
 
 footer {
   padding: 2vh 5vw;
@@ -591,6 +655,11 @@ footer .menu-footer .nav-social ul > li a i {
     margin-right: unset;
     margin-bottom: 2vh;
   }
+  main .services .services-box {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
   footer {
     padding: 2vh 2vw;
     background-color: #245c3a;
@@ -688,6 +757,11 @@ footer .menu-footer .nav-social ul > li a i {
   main .choice .choice-proof .proof-box i {
     justify-content: left;
     margin-right: 3vw;
+  }
+  main .services .services-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
   }
   footer {
     padding: 2vh 3vw;
