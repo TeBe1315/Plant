@@ -363,9 +363,12 @@ main {
 			overflow: hidden;
 			width: 100%;
 			transform: translateY(-50%);
+			border-radius: 0.8rem;
 			img {
+				box-shadow: 0 0 0.9rem #000;
 				width: 100%;
 				background-size: cover;
+				border-radius: 0.8rem;
 			}
 		}
 		.project-header {
@@ -433,6 +436,59 @@ main {
 					&:focus-visible {
 						background-color: v.$color-focus;
 					}
+				}
+			}
+		}
+	}
+	.cta {
+		margin-top: 0;
+		padding: 0;
+		width: 100%;
+		height: 100vh;
+		position: relative;
+		.cta-img {
+			position: absolute;
+			inset: 0;
+			width: 100%;
+			height: 100%;
+			background-size: cover;
+			background-position: center;
+			background-image: url(/img/nastogadka-flower-3646509_1920.jpg);
+		}
+		.cta-text {
+			position: absolute;
+			left: 10%;
+			top: 50%;
+			transform: translateY(-50%);
+			border-radius: 1rem;
+			background-color: v.$color-border;
+			padding: 2rem 3rem;
+			width: 30%;
+			height: 35%;
+			h2 {
+				@include textH2;
+				margin-bottom: 1vh;
+			}
+			p {
+				@include textP;
+				line-height: 3.5vh;
+				margin-bottom: 3vh;
+			}
+			a {
+				@include linksbasics;
+				color: v.$color-button-text;
+				background-color: v.$color-button;
+				border-radius: 1rem;
+				border: 0.1rem solid transparent;
+				transition: background-color 0.3s ease;
+				&:hover {
+					background-color: v.$color-button-hover;
+				}
+				&:active {
+					border: 0.1rem solid v.$color-button-active;
+				}
+				&:focus-visible {
+					background-color: v.$color-focus;
 				}
 			}
 		}
@@ -666,6 +722,19 @@ footer {
 						text-align: center;
 					}
 				}
+			}
+		}
+		.cta {
+			.cta-text {
+				position: absolute;
+				left: 10%;
+				top: 50%;
+				transform: translateY(-50%);
+				border-radius: 1rem;
+				background-color: v.$color-border;
+				padding: 2rem 3rem;
+				width: 90%;
+				height: 35%;
 			}
 		}
 	}
