@@ -250,7 +250,7 @@ main {
 	}
 	.choice {
 		@include gridMedium;
-		background-color: v.$color-secondary;
+		background-color: v.$color-border;
 		.choice-header {
 			display: flex;
 			flex-direction: column;
@@ -332,6 +332,90 @@ main {
 					margin-bottom: 4vh;
 					padding-top: 1vh;
 					border-top: 0.1rem solid v.$color-primary;
+				}
+				a {
+					@include linksbasics;
+					color: v.$color-button-text;
+					background-color: v.$color-button;
+					border-radius: 1rem;
+					border: 0.1rem solid transparent;
+					transition: background-color 0.3s ease;
+					&:hover {
+						background-color: v.$color-button-hover;
+					}
+					&:active {
+						border: 0.1rem solid v.$color-button-active;
+					}
+					&:focus-visible {
+						background-color: v.$color-focus;
+					}
+				}
+			}
+		}
+	}
+	.projects {
+		position: relative;
+		margin-top: 50vh;
+		background-color: v.$color-border;
+		.project-img {
+			position: relative;
+			right: 0;
+			overflow: hidden;
+			width: 100%;
+			transform: translateY(-50%);
+			img {
+				width: 100%;
+				background-size: cover;
+			}
+		}
+		.project-header {
+			transform: translateY(-40vh);
+			width: 100%;
+			text-align: center;
+			h2 {
+				@include textH2;
+				margin-bottom: 1vh;
+			}
+			p {
+				@include textP;
+			}
+		}
+		.project-content-box {
+			@include gridSmall;
+			transform: translateY(-30vh);
+			.project-content {
+				padding: 2rem 3rem;
+				border-radius: 1rem;
+				background-color: v.$color-secondary;
+				.content-img {
+					overflow: hidden;
+					margin-bottom: 2vh;
+					img {
+						object-position: center;
+						width: 100%;
+						height: 25vh;
+						object-fit: cover;
+						background-size: cover;
+					}
+				}
+			}
+			h3 {
+				@include textH3;
+				margin-bottom: 2vh;
+			}
+			.content-footer {
+				display: flex;
+				justify-content: space-between;
+				width: 100%;
+				.content-footer-information {
+					display: flex;
+					gap: 2vw;
+					p {
+						@include textP;
+						i {
+							margin-right: 0.5vw;
+						}
+					}
 				}
 				a {
 					@include linksbasics;
@@ -535,6 +619,55 @@ footer {
 				@include gridXs;
 			}
 		}
+		.projects {
+			margin-top: 20vh;
+			.project-img {
+				position: relative;
+				right: 0;
+				overflow: hidden;
+				width: 100%;
+				transform: translateY(-50%);
+				img {
+					width: 100%;
+					background-size: cover;
+				}
+			}
+			.project-header {
+				transform: translateY(-10vh);
+			}
+			.project-content-box {
+				@include gridXs;
+				transform: translateY(-5vh);
+				.project-content {
+					padding: 2rem 1rem;
+				}
+				h3 {
+					@include textH3;
+					margin-bottom: 2vh;
+				}
+				.content-footer {
+					display: flex;
+					justify-content: space-between;
+					width: 100%;
+					flex-direction: column;
+					.content-footer-information {
+						gap: 0;
+						flex-direction: column;
+						margin-bottom: 1vh;
+						p {
+							@include textP;
+							margin-bottom: 2vh;
+							i {
+								margin-right: 1vw;
+							}
+						}
+					}
+					a {
+						text-align: center;
+					}
+				}
+			}
+		}
 	}
 	footer {
 		padding: 2vh 2vw;
@@ -623,6 +756,54 @@ footer {
 		.services {
 			.services-box {
 				@include gridSmall;
+			}
+		}
+		.projects {
+			margin-top: 20vh;
+			.project-img {
+				position: relative;
+				right: 0;
+				overflow: hidden;
+				width: 100%;
+				transform: translateY(-20%);
+				img {
+					width: 100%;
+					background-size: cover;
+				}
+			}
+			.project-header {
+				transform: translateY(-10vh);
+			}
+			.project-content-box {
+				transform: translateY(-5vh);
+				@include gridSmall;
+				.project-content {
+					padding: 2rem 3rem;
+				}
+
+				.content-footer {
+					display: flex;
+					justify-content: space-between;
+					width: 100%;
+					flex-direction: column;
+					.content-footer-information {
+						gap: 0;
+						flex-direction: column;
+						flex-direction: row;
+						margin-bottom: 1vh;
+						justify-content: space-between;
+						p {
+							@include textP;
+							margin-bottom: 2vh;
+							i {
+								margin-right: 1vw;
+							}
+						}
+					}
+					a {
+						text-align: center;
+					}
+				}
 			}
 		}
 	}

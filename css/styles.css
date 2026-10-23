@@ -313,7 +313,7 @@ main .choice {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  background-color: #3f7d4a;
+  background-color: #d9e2d8;
 }
 main .choice .choice-header {
   display: flex;
@@ -431,6 +431,105 @@ main .services .services-box .service a:active {
   border: 0.1rem solid #c9a122;
 }
 main .services .services-box .service a:focus-visible {
+  background-color: #245c3a;
+}
+main .projects {
+  position: relative;
+  margin-top: 50vh;
+  background-color: #d9e2d8;
+}
+main .projects .project-img {
+  position: relative;
+  right: 0;
+  overflow: hidden;
+  width: 100%;
+  transform: translateY(-50%);
+}
+main .projects .project-img img {
+  width: 100%;
+  background-size: cover;
+}
+main .projects .project-header {
+  transform: translateY(-40vh);
+  width: 100%;
+  text-align: center;
+}
+main .projects .project-header h2 {
+  font-family: "Limelight", sans-serif;
+  font-size: clamp(3.6rem, 3rem + 1.4vw, 4rem);
+  color: #29332c;
+  margin-bottom: 1vh;
+}
+main .projects .project-header p {
+  font-family: "Inter", sans-serif;
+  font-size: clamp(1.6rem, 1.55rem + 0.15vw, 1.8rem);
+  color: #29332c;
+}
+main .projects .project-content-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  transform: translateY(-30vh);
+}
+main .projects .project-content-box .project-content {
+  padding: 2rem 3rem;
+  border-radius: 1rem;
+  background-color: #3f7d4a;
+}
+main .projects .project-content-box .project-content .content-img {
+  overflow: hidden;
+  margin-bottom: 2vh;
+}
+main .projects .project-content-box .project-content .content-img img {
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
+  height: 25vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-size: cover;
+}
+main .projects .project-content-box h3 {
+  font-family: "Limelight", sans-serif;
+  font-size: clamp(3rem, 2.6rem + 1vw, 3.4rem);
+  color: #29332c;
+  margin-bottom: 2vh;
+}
+main .projects .project-content-box .content-footer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+main .projects .project-content-box .content-footer .content-footer-information {
+  display: flex;
+  gap: 2vw;
+}
+main .projects .project-content-box .content-footer .content-footer-information p {
+  font-family: "Inter", sans-serif;
+  font-size: clamp(1.6rem, 1.55rem + 0.15vw, 1.8rem);
+  color: #29332c;
+}
+main .projects .project-content-box .content-footer .content-footer-information p i {
+  margin-right: 0.5vw;
+}
+main .projects .project-content-box .content-footer a {
+  text-decoration: none;
+  font-size: clamp(1.6rem, 1.55rem + 0.15vw, 1.8rem);
+  font-family: "Inter", sans-serif;
+  padding: 0.8vh 3vw;
+  color: #243326;
+  background-color: #f2c94c;
+  border-radius: 1rem;
+  border: 0.1rem solid transparent;
+  transition: background-color 0.3s ease;
+}
+main .projects .project-content-box .content-footer a:hover {
+  background-color: #ddb52f;
+}
+main .projects .project-content-box .content-footer a:active {
+  border: 0.1rem solid #c9a122;
+}
+main .projects .project-content-box .content-footer a:focus-visible {
   background-color: #245c3a;
 }
 
@@ -660,6 +759,61 @@ footer .menu-footer .nav-social ul > li a i {
     grid-template-columns: repeat(1, 1fr);
     gap: 2rem;
   }
+  main .projects {
+    margin-top: 20vh;
+  }
+  main .projects .project-img {
+    position: relative;
+    right: 0;
+    overflow: hidden;
+    width: 100%;
+    transform: translateY(-50%);
+  }
+  main .projects .project-img img {
+    width: 100%;
+    background-size: cover;
+  }
+  main .projects .project-header {
+    transform: translateY(-10vh);
+  }
+  main .projects .project-content-box {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    transform: translateY(-5vh);
+  }
+  main .projects .project-content-box .project-content {
+    padding: 2rem 1rem;
+  }
+  main .projects .project-content-box h3 {
+    font-family: "Limelight", sans-serif;
+    font-size: clamp(3rem, 2.6rem + 1vw, 3.4rem);
+    color: #29332c;
+    margin-bottom: 2vh;
+  }
+  main .projects .project-content-box .content-footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-direction: column;
+  }
+  main .projects .project-content-box .content-footer .content-footer-information {
+    gap: 0;
+    flex-direction: column;
+    margin-bottom: 1vh;
+  }
+  main .projects .project-content-box .content-footer .content-footer-information p {
+    font-family: "Inter", sans-serif;
+    font-size: clamp(1.6rem, 1.55rem + 0.15vw, 1.8rem);
+    color: #29332c;
+    margin-bottom: 2vh;
+  }
+  main .projects .project-content-box .content-footer .content-footer-information p i {
+    margin-right: 1vw;
+  }
+  main .projects .project-content-box .content-footer a {
+    text-align: center;
+  }
   footer {
     padding: 2vh 2vw;
     background-color: #245c3a;
@@ -762,6 +916,57 @@ footer .menu-footer .nav-social ul > li a i {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+  }
+  main .projects {
+    margin-top: 20vh;
+  }
+  main .projects .project-img {
+    position: relative;
+    right: 0;
+    overflow: hidden;
+    width: 100%;
+    transform: translateY(-20%);
+  }
+  main .projects .project-img img {
+    width: 100%;
+    background-size: cover;
+  }
+  main .projects .project-header {
+    transform: translateY(-10vh);
+  }
+  main .projects .project-content-box {
+    transform: translateY(-5vh);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  main .projects .project-content-box .project-content {
+    padding: 2rem 3rem;
+  }
+  main .projects .project-content-box .content-footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-direction: column;
+  }
+  main .projects .project-content-box .content-footer .content-footer-information {
+    gap: 0;
+    flex-direction: column;
+    flex-direction: row;
+    margin-bottom: 1vh;
+    justify-content: space-between;
+  }
+  main .projects .project-content-box .content-footer .content-footer-information p {
+    font-family: "Inter", sans-serif;
+    font-size: clamp(1.6rem, 1.55rem + 0.15vw, 1.8rem);
+    color: #29332c;
+    margin-bottom: 2vh;
+  }
+  main .projects .project-content-box .content-footer .content-footer-information p i {
+    margin-right: 1vw;
+  }
+  main .projects .project-content-box .content-footer a {
+    text-align: center;
   }
   footer {
     padding: 2vh 3vw;
